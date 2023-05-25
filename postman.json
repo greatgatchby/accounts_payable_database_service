@@ -1,0 +1,1389 @@
+{
+  "info": {
+    "_postman_id": "f4ab2db7-4c02-4e7b-8a44-8e91aa122e01",
+    "name": "Flask API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Hello World",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": []
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Process Invoice",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"s3_bucket\": \"your_s3_bucket\",\n    \"s3_object\": \"your_s3_object\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/process-invoice",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "process-invoice"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Supplier",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/supplier/get-all/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "supplier",
+            "get-all",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Supplier",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/supplier/{supplier_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "supplier",
+            "{supplier_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Supplier",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"New Supplier Name\",\n    \"address\": \"New Address\",\n    \"phone\": \"New Phone\",\n    \"email\": \"New Email\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/supplier/{supplier_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "supplier",
+            "{supplier_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Supplier",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/supplier/{supplier_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "supplier",
+            "{supplier_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Invoices",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice/get-all/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "get-all",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Invoice",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice/{invoice_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "{invoice_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Invoice",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"invoice_number\": \"New Invoice Number\",\n    \"invoice_date\": \"New Invoice Date\",\n    \"due_date\": \"New Due Date\",\n    \"supplier_id\": \"New Supplier ID\",\n    \"status\": \"New Status\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/invoice/{invoice_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "{invoice_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Invoice",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice/{invoice_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "{invoice_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Purchase Order",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/purchase_order/{purchase_order_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "purchase_order",
+            "{purchase_order_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Purchase Order",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"po_number\": \"New PO Number\",\n    \"po_date\": \"New PO Date\",\n    \"supplier_id\": \"New Supplier ID\",\n    \"status\": \"New Status\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/purchase_order/{purchase_order_id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "supplier",
+            "{supplier_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Invoices",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice/get-all/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "get-all",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Invoice",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice/{invoice_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "{invoice_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Invoice",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"invoice_number\": \"New Invoice Number\",\n    \"invoice_date\": \"New Invoice Date\",\n    \"due_date\": \"New Due Date\",\n    \"supplier_id\": \"New Supplier ID\",\n    \"status\": \"New Status\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/invoice/{invoice_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "{invoice_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Invoice",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice/{invoice_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice",
+            "{invoice_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Purchase Order",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/purchase_order/{purchase_order_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "purchase_order",
+            "{purchase_order_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Purchase Order",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"po_number\": \"New PO Number\",\n    \"po_date\": \"New PO Date\",\n    \"supplier_id\": \"New Supplier ID\",\n    \"status\": \"New Status\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/purchase_order/{purchase_order_id",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "purchase_order",
+            "{purchase_order_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Purchase Order",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/purchase_order/{purchase_order_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "purchase_order",
+            "{purchase_order_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Purchase Order Item",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/purchase_order_item/{purchase_order_item_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "purchase_order_item",
+            "{purchase_order_item_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Purchase Order Item",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"po_id\": \"New PO ID\",\n    \"description\": \"New Description\",\n    \"quantity\": \"New Quantity\",\n    \"unit_price\": \"New Unit Price\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/purchase_order_item/{purchase_order_item_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "purchase_order_item",
+            "{purchase_order_item_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Purchase Order Item",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/purchase_order_item/{purchase_order_item_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "purchase_order_item",
+            "{purchase_order_item_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Invoice Item",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"invoice_id\": \"Invoice ID\",\n    \"description\": \"Description\",\n    \"quantity\": \"Quantity\",\n    \"unit_price\": \"Unit Price\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/invoice_item",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice_item"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Invoice Item",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice_item/{invoice_item_id}",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice_item",
+            "{invoice_item_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Invoice Item",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"invoice_id\": \"New Invoice ID\",\n    \"description\": \"New Description\",\n    \"quantity\": \"New Quantity\",\n    \"unit_price\": \"New Unit Price\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/invoice_item/{invoice_item_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice_item",
+            "{invoice_item_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Invoice Item",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/invoice_item/{invoice_item_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "invoice_item",
+            "{invoice_item_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Customer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Customer Name\",\n    \"address\": \"Customer Address\",\n    \"phone\": \"Customer Phone\",\n    \"email\": \"Customer Email\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/customer",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "customer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Customers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/customer/get-all/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "customer",
+            "get-all",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Customer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/customer/{customer_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "customer",
+            "{customer_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Customer",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"New Customer Name\",\n    \"address\": \"New Customer Address\",\n    \"phone\": \"New Customer Phone\",\"email\": \"New Customer Email\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/customer/{customer_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "customer",
+            "{customer_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Customer",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/customer/{customer_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "customer",
+            "{customer_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Account",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"cognito_group_id\": \"Cognito Group ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/account",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "account"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Account",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/account/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "account",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Account",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"cognito_group_id\": \"New Cognito Group ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/account/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "account",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Account",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/account/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "account",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Approval Hierarchies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/approval-hierarchy/get-all/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "approval-hierarchy",
+            "{account_id}"
+          ]
+        },
+        "response": []
+      }
+    },
+    {
+      "name": "Create Approval Hierarchy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Approval Hierarchy Name\",\n    \"account_id\": \"Account ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/approval-hierarchy",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "approval-hierarchy"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Approval Hierarchy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/approval-hierarchy/{approval_hierarchy_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "approval-hierarchy",
+            "{approval_hierarchy_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Approval Hierarchy",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"New Approval Hierarchy Name\",\n    \"account_id\": \"New Account ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/approval-hierarchy/{approval_hierarchy_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "approval-hierarchy",
+            "{approval_hierarchy_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Approval Hierarchy",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/approval-hierarchy/{approval_hierarchy_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "approval-hierarchy",
+            "{approval_hierarchy_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Discrepancy",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"document_type\": \"Document Type\",\n    \"document_number\": \"Document Number\",\n    \"customer_id\": \"Customer ID\",\n    \"supplier_id\": \"Supplier ID\",\n    \"discrepancy_type\": \"Discrepancy Type\",\n    \"document_amount\": \"Document Amount\",\n    \"expected_amount\": \"Expected Amount\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/discrepancy",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "discrepancy"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Discrepancies",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/discrepancy/get-all/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "discrepancy",
+            "get-all",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Discrepancy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/discrepancy/{discrepancy_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "discrepancy",
+            "{discrepancy_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Discrepancy",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"document_type\": \"New Document Type\",\n    \"document_number\": \"New Document Number\",\n    \"customer_id\": \"New Customer ID\",\n    \"supplier_id\": \"New Supplier ID\",\n    \"discrepancy_type\": \"New Discrepancy Type\",\n    \"document_amount\": \"New Document Amount\",\n    \"expected_amount\": \"New Expected Amount\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/discrepancy/{discrepancy_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "discrepancy",
+            "{discrepancy_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Discrepancy",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/discrepancy/{discrepancy_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "discrepancy",
+            "{discrepancy_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Integration",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Integration Name\",\n    \"kms_key_arn\": \"KMS Key ARN\",\n    \"endpoint_url\": \"Endpoint URL\",\n    \"status\": \"Status\",\n    \"account_id\": \"Account ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/integration",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "integration"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Integrations",
+      "request": {
+        "method": "GET",
+                "header": [],
+        "url": {
+          "raw": "http://localhost:5000/integration/get-all/{account_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "integration",
+            "get-all",
+            "{account_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Integration",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/integration/{integration_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "integration",
+            "{integration_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Integration",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"New Integration Name\",\n    \"kms_key_arn\": \"New KMS Key ARN\",\n    \"endpoint_url\": \"New Endpoint URL\",\n    \"status\": \"New Status\",\n    \"account_id\": \"New Account ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/integration/{integration_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "integration",
+            "{integration_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Integration",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/integration/{integration_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "integration",
+            "{integration_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Permission",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"permission_name\": \"Permission Name\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/permission",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "permission"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Permission",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/permission/{permission_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "permission",
+            "{permission_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Permission",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"permission_name:\"New Permission Name\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/permission/{permission_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "permission",
+            "{permission_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Permission",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/permission/{permission_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "permission",
+            "{permission_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Role",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"role_name\": \"Role Name\",\n    \"account_id\": \"Account ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/role",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Role",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/role/{role_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role",
+            "{role_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Role",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"role_name\": \"New Role Name\",\n    \"account_id\": \"New Account ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/role/{role_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role",
+            "{role_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Role",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/role/{role_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role",
+            "{role_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Role Permission",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"role_id\": \"Role ID\",\n    \"permission_id\": \"Permission ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/role_permission",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role_permission"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Role Permission",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/role_permission/{role_permission_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role_permission",
+            "{role_permission_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Role Permission",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"role_id\": \"New Role ID\",\n    \"permission_id\": \"New Permission ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/role_permission/{role_permission_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role_permission",
+            "{role_permission_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Role Permission",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/role_permission/{role_permission_id}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "role_permission",
+            "{role_permission_id}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create User Role",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_id\": \"User ID\",\n    \"role_id\": \"Role ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/user_roles",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "user_roles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User Role",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_id\": \"User ID\",\n    \"role_id\": \"Role ID\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/user_roles",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "user_roles"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
+
+
+
